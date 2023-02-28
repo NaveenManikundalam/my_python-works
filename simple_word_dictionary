@@ -1,0 +1,24 @@
+
+word_dictionary = {"Book" : "A written or printed work consisting of pages glued or sewn together along one side and bound in covers.",
+                    "Chair" : "A separate seat for one person, typically with a back and four legs.",
+                    "Bottle" : "A glass or plastic container with a narrow neck, used for storing drinks or other liquids.",
+                    "Computer" : "An electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program",
+                    "House" : "A building for human habitation, especially one that consists of a ground floor and one or more upper storeys.",
+                    "Vehicle" : "A thing used for transporting people or goods, especially on land, such as a car, lorry, or cart.",
+                    "Trek" : "A long arduous journey, especially one made on foot.",
+                    "Racket" : "A bat with a round or oval frame strung with catgut, nylon, etc., used especially in tennis, badminton, and squash.",
+                    "Picture" : "A painting or drawing.",
+                    "Medicine" : "A drug or other preparation for the treatment or prevention of disease."}
+
+word_dictionary_num = {1:"Book", 2:"Chair", 3:"Bottle", 4:"Computer", 5:"House", 6: "Vehicle", 7:"Trek", 8:"Racket", 9:"Picture", 10:"Medicine"}
+
+print("Words available in the dictionary are ....")
+for key,value in word_dictionary_num.items():
+    print (key,":", value)
+
+word = int(input("Please enter the number of the word for which you need the meaning = "))
+
+if type(word) == int:
+    print(f"Meaning for the word '{word_dictionary_num[word]}' = ",word_dictionary[word_dictionary_num[word]])  
+else:
+    print("Please enter an integer value")

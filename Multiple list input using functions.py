@@ -1,5 +1,4 @@
 counter=0
-
 lists=int(input('Enter the number of lists needed = '))
 
 def message():
@@ -12,7 +11,7 @@ def message():
     del my_list
         
 for i in range(lists):
-    length=int(input("\nPlease enter the length of the list ="))
+    length=int(input(f"\nPlease enter the length of the list no.{i+1}="))
     print("We start here !!")
     counter+=1
     message()

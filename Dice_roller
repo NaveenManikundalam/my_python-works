@@ -1,0 +1,65 @@
+import random
+
+def dice_roll():
+
+    dice_drawing = {
+        1: (
+            "__________",
+           "|         |",
+           "|    1    |",
+           "|    •    |",
+           "|_________|",
+        ),
+        2: (
+            "_________",
+           "|       • |",
+           "|    2    |",
+           "| •       |",
+           "|_________|",
+        ),
+        3: (
+            "_________",
+           "|    3  • |",
+           "|    •    |",
+           "| •       |",
+           "|_________|",
+        ),
+        4: (
+             "_________",
+           "| •     • |",
+           "|    4    |",
+           "| •     • |",
+           "|_________|",
+        ),
+        5: (
+            "_________",
+           "| •  5  • |",
+           "|    •    |",
+           "| •     • |",
+           "|_________|",
+        ),
+        6: (
+           "___________",
+           "| o     o |",
+           "| o  6  o |",
+           "| o     o |",
+           "|_________|",
+        )
+    }
+
+    roll = input("Roll dice (Yes/No) = ")
+    roll = roll.lower()
+    while roll == "yes":
+        dice1 = random.randint(1,6)
+        dice2 = random.randint(1,6)
+        print(f"Dice rolled with the results {dice1} and {dice2}")
+        print("\n".join(dice_drawing[dice1]))
+        print("\n".join(dice_drawing[dice2]))
+        roll = input("Roll the dice again (Yes/No) = ??")
+
+dice_roll()
+print("Thank you. Have Great Day:)")
+
+
+    
+

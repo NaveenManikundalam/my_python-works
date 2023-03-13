@@ -1,21 +1,31 @@
-import random
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
-def guess(x):
-    
-    random_number = random.randint(1,x)
-    guess = 0
-    
-    while guess != random_number:
-        guess = int(input(f'Please guess a number between 1 and {x} :'))
-        
-        if guess < random_number:
-            print('Guess again, Too low')
-            
-        elif guess > random_number:
-            print('Guess again, Too high')
-            
-    print(f'Yay,You have guessed the number {random_number} correctly')
-    
-guess(10)
-        
-            
+class LinkedList:
+    def traverse(self):
+        first = self.head
+        while first:
+            print(first.data)
+            first = first.next
+
+    def insert_new_header(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+
+family = LinkedList()
+family.head = Node("Bob")
+wife = Node("Amy")
+Kid1 = Node("Max")
+Kid2 = Node("Jenny")
+
+family.head.next = wife
+wife.next = Kid1
+Kid1.next = Kid2
+
+# family.traverse()
+family.insert_new_header("Dave")
+family.traverse()
+ 

@@ -1,28 +1,31 @@
 import random
 
 def play():
-    user = input("What's your choice? 'r' for rock, 'p' for paper, 's' for scissors\n")
-    computer = random.choice(['r', 'p', 's'])
+     rps = ["r", "p", "s"]
+     comp_choice = random.choice(rps)
+     comp, user = "", ""
+     user_choice = input('Enter your choice "r" for rock, "s" for scissors, "p" for paper = ')
 
-    if user == computer:
-        print('You chose:',user)
-        print('Computer chose:',computer)
-        return 'It\'s a tie'
+     if comp_choice == "r":comp = "Rock"
+     elif comp_choice == "s": comp = "Scissors"
+     else: comp = "Paper" 
+     if user_choice == "r":user = "Rock"
+     elif user_choice == "s": user = "Scissors"
+     else: user = "Paper" 
+     print(f"You chose : {user}")
+     print(f"Computer chose : {comp}") 
 
-    if is_win(user, computer):
-        print('You chose:',user)
-        print('Computer chose:',computer)
-        return 'You won!'
+     if (user_choice == "r" and comp_choice == "s")\
+          or (user_choice == "s" and comp_choice == "p")\
+          or (user_choice == "p" and comp_choice == "r"):
+          print("Yes!!! You won !!!")
 
-    else:
-        print('You chose:',user)
-        print('Computer chose:',computer)
-        return 'You lost!'
+     elif user_choice == comp_choice:
+          print("It is a Tie!!!")
 
-def is_win(player, opponent):
-    if (player == 'r' and opponent == 's') \
-       or (player == 's' and opponent == 'p') \
-        or (player == 'p' and opponent == 'r'):
-        return True
+     else:
+          print("You lost!!!")
 
-print(play())
+play()
+
+

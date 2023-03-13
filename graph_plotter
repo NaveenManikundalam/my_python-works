@@ -10,4 +10,4 @@ plt.plot(x, -y,"--", color="blue")
 plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
 plt.title("Circle")
-plt.show()
+plt.show() f

@@ -32,8 +32,8 @@ def hangman():
                print("You have already used this letter")
           else:
                print("Invalid letter")
-     if lives == 0:print(f"Sorry you died. The correct word was {word}")
-     else:print(f"You have guessed the word {word} correctly")  
+     if lives == 0:print(f"***Sorry you died. The correct word was {word}****")
+     else:print(f"***Congratulations!!!!! You have guessed the word {word} correctly***")  
 
 
 hangman()

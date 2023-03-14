@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import numpy as np
+r = 10
+x = np.linspace(10, -10, 100)
+y = np.sqrt((r**2)-(x**2))
+
+plt.plot(x, y,"--", color="blue", )
+plt.plot(x, -y,"--", color="blue")
+
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Circle")
+plt.show() f
